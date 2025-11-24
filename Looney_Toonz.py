@@ -193,6 +193,9 @@ class Race:
 
                 # after each atomic move we update cycle/mountain rules
                 self.cycle_moves += 1
+                print(f"Cycle #: ", self.cycle_moves)
+                print(self.players[symbol].name, f"'s turn.")
+
                 # check if we've completed a full "round" (every player moved once)
                 if self.cycle_moves % NUM_PLAYERS == 0:
                     self.full_cycles += 1
